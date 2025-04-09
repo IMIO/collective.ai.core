@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../browser/controlpanel.py:65
 msgid "Main AI settings"
-msgstr "TEST"
+msgstr ""
 
 #: ../browser/controlpanel.py:31
 msgid "Service URL"

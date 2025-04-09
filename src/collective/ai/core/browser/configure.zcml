@@ -36,7 +36,7 @@
     factory=".menu.AIActionsSubMenuItem"
     provides="plone.app.contentmenu.interfaces.IContentMenuItem"
     for="*
-         *"
+         collective.ai.core.interfaces.ICollectiveAICoreLayer"
     name="plone.contentmenu.ai.actions"
   />
 </configure>

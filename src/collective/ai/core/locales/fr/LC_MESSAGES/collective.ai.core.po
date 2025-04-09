@@ -32,15 +32,15 @@ msgstr "Actif"
 
 #: ../browser/controlpanel.py:40
 msgid "Additional configuration in JSON format for this service."
-msgstr ""
+msgstr "Configuration additionnelle au format JSON pour ce service."
 
 #: ../browser/controlpanel.py:39
 msgid "Extra Configuration (JSON)"
-msgstr ""
+msgstr "Configuration additionnelle (JSON)"
 
 #: ../configure.zcml:49
 msgid "Installs the collective.ai.core add-on."
-msgstr ""
+msgstr "Installe le module collective.ai.core."
 
 #: ../browser/controlpanel.py:22
 msgid "Label"
@@ -60,11 +60,11 @@ msgstr "Type de service"
 
 #: ../browser/configure.zcml:33
 msgid "The 'actions' menu - allows the user to execute actions on an object"
-msgstr ""
+msgstr "Le menu 'actions' - permet à l'utilisateur d'exécuter des actions sur un objet"
 
 #: ../configure.zcml:58
 msgid "Uninstalls the collective.ai.core add-on."
-msgstr ""
+msgstr "Désinstalle le module collective.ai.core."
 
 #: ../configure.zcml:49
 msgid "collective.ai.core"
@@ -77,9 +77,9 @@ msgstr ""
 #. Default: "AI assistant"
 #: ../browser/menu.py:18
 msgid "collective_ai_actions"
-msgstr ""
+msgstr "Actions IA"
 
 #. Default: "Actions for the current content item"
 #: ../browser/menu.py:19
 msgid "title_actions_menu"
-msgstr ""
+msgstr "Actions pour l'élément actuel"
