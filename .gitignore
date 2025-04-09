@@ -37,3 +37,5 @@ report.html
 reports/
 venv/
 # excludes
+src/collective.ai.classification/
+src/collective.ai.summarizer/
