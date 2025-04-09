@@ -16,19 +16,19 @@ msgstr ""
 
 #: ../browser/controlpanel.py:58
 msgid "AI text completion service"
-msgstr ""
+msgstr "Service de complétion de texte par IA"
 
 #: ../browser/controlpanel.py:56
 msgid "AI text completion services"
-msgstr ""
+msgstr "Services de complétion de texte par IA"
 
 #: ../browser/controlpanel.py:35
 msgid "API key"
-msgstr ""
+msgstr "Clé API"
 
 #: ../browser/controlpanel.py:44
 msgid "Active"
-msgstr ""
+msgstr "Actif"
 
 #: ../browser/controlpanel.py:40
 msgid "Additional configuration in JSON format for this service."
@@ -44,19 +44,19 @@ msgstr ""
 
 #: ../browser/controlpanel.py:22
 msgid "Label"
-msgstr ""
+msgstr "Libellé"
 
 #: ../browser/controlpanel.py:65
 msgid "Main AI settings"
-msgstr "TEST"
+msgstr "Paramètres principaux de l'IA"
 
 #: ../browser/controlpanel.py:31
 msgid "Service URL"
-msgstr ""
+msgstr "URL du service"
 
 #: ../browser/controlpanel.py:26
 msgid "Service type"
-msgstr ""
+msgstr "Type de service"
 
 #: ../browser/configure.zcml:33
 msgid "The 'actions' menu - allows the user to execute actions on an object"

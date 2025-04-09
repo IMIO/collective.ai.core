@@ -6,16 +6,16 @@ from zope.browsermenu.interfaces import IBrowserSubMenuItem, IBrowserMenu
 from zope.browsermenu.menu import BrowserMenu, BrowserSubMenuItem
 from zope.component import getMultiAdapter, queryUtility, getAllUtilitiesRegisteredFor
 from zope.interface import implementer
-from collective.ai.core.interfaces import IAiActionsProvider
+from collective.ai.core.interfaces import IAIActionsProvider
 from collective.ai.core import _
 
-class IAiActionsMenu(IBrowserMenu):
+class IAIActionsMenu(IBrowserMenu):
     """The menu item linking to the actions menu."""
 
 
 @implementer(IActionsSubMenuItem)
-class AiActionsSubMenuItem(BrowserSubMenuItem):
-    title = _("collective_ai_actions", default="Actions")
+class AIActionsSubMenuItem(BrowserSubMenuItem):
+    title = _("collective_ai_actions", default="AI assistant")
     description = _(
         "title_actions_menu", default="Actions for the current content item"
     )
@@ -40,6 +40,7 @@ class AiActionsSubMenuItem(BrowserSubMenuItem):
             folder = aq_parent(aq_inner(self.context))
         return folder.absolute_url() + "/folder_contents"
 
+
     def available(self):
         return True
 
@@ -47,8 +48,8 @@ class AiActionsSubMenuItem(BrowserSubMenuItem):
         return False
 
 
-@implementer(IAiActionsMenu)
-class AiActionsMenu(BrowserMenu):
+@implementer(IAIActionsMenu)
+class AIActionsMenu(BrowserMenu):
     def getMenuItems(self, context, request):
         """Return menu item entries in a TAL-friendly form."""
         results = []
@@ -81,7 +82,7 @@ class AiActionsMenu(BrowserMenu):
                 }
             )
 
-        addon_actions_providers = getAllUtilitiesRegisteredFor(IAiActionsProvider)
+        addon_actions_providers = getAllUtilitiesRegisteredFor(IAIActionsProvider)
         for actions_provider in addon_actions_providers:
             for action in actions_provider(context, request):
                 results.append(action)

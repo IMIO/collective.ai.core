@@ -12,7 +12,7 @@ from plone.testing import z2
 import collective.ai.core
 
 
-class CollectiveAiCoreLayer(PloneSandboxLayer):
+class CollectiveAICoreLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
 
@@ -30,18 +30,18 @@ class CollectiveAiCoreLayer(PloneSandboxLayer):
         applyProfile(portal, 'collective.ai.core:default')
 
 
-COLLECTIVE_AI_CORE_FIXTURE = CollectiveAiCoreLayer()
+COLLECTIVE_AI_CORE_FIXTURE = CollectiveAICoreLayer()
 
 
 COLLECTIVE_AI_CORE_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_AI_CORE_FIXTURE,),
-    name='CollectiveAiCoreLayer:IntegrationTesting',
+    name='CollectiveAICoreLayer:IntegrationTesting',
 )
 
 
 COLLECTIVE_AI_CORE_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_AI_CORE_FIXTURE,),
-    name='CollectiveAiCoreLayer:FunctionalTesting',
+    name='CollectiveAICoreLayer:FunctionalTesting',
 )
 
 
@@ -51,5 +51,5 @@ COLLECTIVE_AI_CORE_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='CollectiveAiCoreLayer:AcceptanceTesting',
+    name='CollectiveAICoreLayer:AcceptanceTesting',
 )

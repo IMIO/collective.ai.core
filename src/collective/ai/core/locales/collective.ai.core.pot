@@ -1,0 +1,88 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2024-10-11 12:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.ai.core\n"
+
+#: ../browser/controlpanel.py:58
+msgid "AI text completion service"
+msgstr ""
+
+#: ../browser/controlpanel.py:56
+msgid "AI text completion services"
+msgstr ""
+
+#: ../browser/controlpanel.py:35
+msgid "API key"
+msgstr ""
+
+#: ../browser/controlpanel.py:44
+msgid "Active"
+msgstr ""
+
+#: ../browser/controlpanel.py:40
+msgid "Additional configuration in JSON format for this service."
+msgstr ""
+
+#: ../browser/controlpanel.py:39
+msgid "Extra Configuration (JSON)"
+msgstr ""
+
+#: ../configure.zcml:49
+msgid "Installs the collective.ai.core add-on."
+msgstr ""
+
+#: ../browser/controlpanel.py:22
+msgid "Label"
+msgstr ""
+
+#: ../browser/controlpanel.py:65
+msgid "Main AI settings"
+msgstr ""
+
+#: ../browser/controlpanel.py:31
+msgid "Service URL"
+msgstr ""
+
+#: ../browser/controlpanel.py:26
+msgid "Service type"
+msgstr ""
+
+#: ../browser/configure.zcml:33
+msgid "The 'actions' menu - allows the user to execute actions on an object"
+msgstr ""
+
+#: ../configure.zcml:58
+msgid "Uninstalls the collective.ai.core add-on."
+msgstr ""
+
+#: ../configure.zcml:49
+msgid "collective.ai.core"
+msgstr ""
+
+#: ../configure.zcml:58
+msgid "collective.ai.core (uninstall)"
+msgstr ""
+
+#. Default: "AI assistant"
+#: ../browser/menu.py:18
+msgid "collective_ai_actions"
+msgstr ""
+
+#. Default: "Actions for the current content item"
+#: ../browser/menu.py:19
+msgid "title_actions_menu"
+msgstr ""

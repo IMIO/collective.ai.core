@@ -19,6 +19,15 @@ class ServiceTypesVocabulary:
         ]
         return SimpleVocabulary(terms)
 
+@implementer(IVocabularyFactory)
+class TextCompletionServicesVocabulary:
+    def __call__(self, context):
+        registry = getUtility(IRegistry)
+        ai_settings = registry.forInterface(IAICoreSettings, check=False)
+        terms = [
+            SimpleTerm(i, s['label'], s['label']) for i,s in enumerate(ai_settings.text_completion_services)
+        ]
+        return SimpleVocabulary(terms)
 
 @implementer(IVocabularyFactory)
 class ActiveTextCompletionServicesVocabulary:
@@ -26,22 +35,10 @@ class ActiveTextCompletionServicesVocabulary:
         registry = getUtility(IRegistry)
         ai_settings = registry.forInterface(IAICoreSettings, check=False)
         terms = [
-            SimpleTerm(i, s['label'], s['label']) for i,s in enumerate(ai_settings.ai_text_completion_services)
+            SimpleTerm(i, s['label'], s['label']) for i,s in enumerate(ai_settings.text_completion_services)
             if s['active']
         ]
         return SimpleVocabulary(terms)
-
-
-@implementer(IVocabularyFactory)
-class TextCompletionServicesVocabulary:
-    def __call__(self, context):
-        registry = getUtility(IRegistry)
-        ai_settings = registry.forInterface(IAICoreSettings, check=False)
-        terms = [
-            SimpleTerm(i, s['label'], s['label']) for i,s in enumerate(ai_settings.ai_text_completion_services)
-        ]
-        return SimpleVocabulary(terms)
-
 
 @implementer(IVocabularyFactory)
 class TextCompletionModelsVocabulary:
@@ -49,7 +46,7 @@ class TextCompletionModelsVocabulary:
         terms = []
         registry = getUtility(IRegistry)
         ai_settings = registry.forInterface(IAICoreSettings, check=False)
-        for i, s in enumerate(ai_settings.ai_text_completion_services):
+        for i, s in enumerate(ai_settings.text_completion_services):
             conn = queryAdapter(context, IAIAPIService, name=s['service_type'])
             if not conn:
                 continue

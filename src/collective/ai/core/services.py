@@ -1,8 +1,9 @@
-from collective.ai.core.browser.controlpanel import IAICoreSettings, IAITextCompletionService
+from openai import OpenAI
+
+from collective.ai.core.browser.controlpanel import IAICoreSettings
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility, adapter
 from zope.interface import Interface, implementer
-from openai import OpenAI
 
 
 class IAIAPIService(Interface):
@@ -24,7 +25,7 @@ class OpenAIService:
         self.ai_settings = registry.forInterface(IAICoreSettings, check=False)
 
     def __call__(self, config_row, model):
-        self.service_settings = self.ai_settings.ai_text_completion_services[config_row]
+        self.service_settings = self.ai_settings.text_completion_services[config_row]
         extra_config = self.service_settings["extra_config"] or {}
         self.client = OpenAI(
             base_url=self.service_settings["api_service_url"],

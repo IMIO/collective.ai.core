@@ -8,7 +8,7 @@
   <include package="z3c.jbot" file="meta.zcml"/>
   <browser:jbot
     directory="overrides"
-    layer="collective.ai.core.interfaces.ICollectiveAiCoreLayer"
+    layer="collective.ai.core.interfaces.ICollectiveAICoreLayer"
   />
 
   <!-- Publish static files -->
@@ -21,22 +21,22 @@
   <browser:page
     name="collective-ai-settings"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-    class=".controlpanel.AiCoreControlPanelView"
+    class=".controlpanel.AICoreControlPanelView"
     permission="cmf.ManagePortal"
-    layer="collective.ai.core.interfaces.ICollectiveAiCoreLayer"
+    layer="collective.ai.core.interfaces.ICollectiveAICoreLayer"
   />
 
   <browser:menu
     id="collective-ai-actions"
     title="The 'actions' menu - allows the user to execute actions on an object"
-    class=".menu.AiActionsMenu"
-    />
+    class=".menu.AIActionsMenu"
+  />
 
   <adapter
-    factory=".menu.AiActionsSubMenuItem"
+    factory=".menu.AIActionsSubMenuItem"
     provides="plone.app.contentmenu.interfaces.IContentMenuItem"
     for="*
          *"
     name="plone.contentmenu.ai.actions"
-    />
+  />
 </configure>

@@ -6,7 +6,7 @@
     purge="False">
 
   <configlet
-      title="collective.ai Control Panel"
+      title="AI"
       action_id="collective.ai.core"
       appId="collective.ai.core"
       category="Products"

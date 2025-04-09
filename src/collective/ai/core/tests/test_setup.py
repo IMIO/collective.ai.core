@@ -33,12 +33,12 @@ class TestSetup(unittest.TestCase):
             'collective.ai.core'))
 
     def test_browserlayer(self):
-        """Test that ICollectiveAiCoreLayer is registered."""
+        """Test that ICollectiveAICoreLayer is registered."""
         from collective.ai.core.interfaces import (
-            ICollectiveAiCoreLayer)
+            ICollectiveAICoreLayer)
         from plone.browserlayer import utils
         self.assertIn(
-            ICollectiveAiCoreLayer,
+            ICollectiveAICoreLayer,
             utils.registered_layers())
 
 
@@ -63,8 +63,8 @@ class TestUninstall(unittest.TestCase):
             'collective.ai.core'))
 
     def test_browserlayer_removed(self):
-        """Test that ICollectiveAiCoreLayer is removed."""
+        """Test that ICollectiveAICoreLayer is removed."""
         from collective.ai.core.interfaces import \
-            ICollectiveAiCoreLayer
+            ICollectiveAICoreLayer
         from plone.browserlayer import utils
-        self.assertNotIn(ICollectiveAiCoreLayer, utils.registered_layers())
+        self.assertNotIn(ICollectiveAICoreLayer, utils.registered_layers())
