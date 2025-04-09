@@ -64,6 +64,11 @@ setup(
             'plone.testing>=5.0.0',
             'plone.app.contenttypes',
             'plone.app.robotframework[debug]',
+            'collective.z3cform.datagridfield',
+            "pytest",
+            "pytest-plone",
+            "pytest-cov",
+            "zope.pytestlayer",
         ],
     },
     entry_points="""

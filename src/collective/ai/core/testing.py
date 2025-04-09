@@ -10,7 +10,7 @@ from plone.app.testing import (
 from plone.testing import z2
 
 import collective.ai.core
-
+import collective.z3cform.datagridfield
 
 class CollectiveAICoreLayer(PloneSandboxLayer):
 
@@ -25,6 +25,7 @@ class CollectiveAICoreLayer(PloneSandboxLayer):
         import plone.restapi
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=collective.ai.core)
+        self.loadZCML(package=collective.z3cform.datagridfield)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'collective.ai.core:default')
@@ -43,7 +44,6 @@ COLLECTIVE_AI_CORE_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_AI_CORE_FIXTURE,),
     name='CollectiveAICoreLayer:FunctionalTesting',
 )
-
 
 COLLECTIVE_AI_CORE_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
