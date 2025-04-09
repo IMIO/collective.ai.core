@@ -1,4 +1,4 @@
 Contributors
 ============
 
-- Antoine Duchêne, antoineduchene@icloud.com
+- Antoine Duchêne, antoine.duchene@imio.be

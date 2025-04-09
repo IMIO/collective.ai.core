@@ -33,6 +33,7 @@ pip-selfcheck.json
 pyvenv.cfg
 report.html
 .vscode/
+.idea/
 .tox/
 reports/
 venv/
