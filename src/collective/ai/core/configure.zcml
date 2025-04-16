@@ -80,6 +80,12 @@
     name="openrouter-ai-service"
   />
 
+  <adapter
+    factory=".services.AzueAIService"
+    provides=".services.IAIAPIService"
+    name="azure-ai-service"
+  />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

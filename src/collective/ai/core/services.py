@@ -70,5 +70,15 @@ class MistralAIService(OpenAIService):
 
 @adapter(Interface)
 @implementer(IAIAPIService)
+class AzueAIService(OpenAIService):
+    name = "Azure"
+
+    def list_models(self):
+        return [
+            "Mistral-Large-2411"
+        ]
+
+@adapter(Interface)
+@implementer(IAIAPIService)
 class OpenRouterAIService(OpenAIService):
     name = "OpenRouter"
