@@ -63,6 +63,7 @@ class IAICoreSettings(Interface):
 class AICoreControlPanelForm(RegistryEditForm):
     label = _("Main AI settings")
     schema = IAICoreSettings
+    ignoreRequiredOnExtract = True
 
 
 class AICoreControlPanelFormWrapper(ControlPanelFormWrapper):
