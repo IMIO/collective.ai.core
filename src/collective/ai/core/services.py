@@ -1,9 +1,12 @@
 from openai import OpenAI
 
 from collective.ai.core.browser.controlpanel import IAICoreSettings
+from plone.memoize.forever import memoize
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility, adapter
 from zope.interface import Interface, implementer
+
+_MODELS_CACHE = {}
 
 
 class IAIAPIService(Interface):
@@ -42,14 +45,10 @@ class OpenAIService:
         return completion.choices[0].message.content
 
     def list_models(self):
-        # models = self.client.models.list()
-        # return [m.id for m in models.data]
-        return [
-            "gpt-4o",
-            "gpt-4o-mini",
-            "gpt-4-turbo",
-            "gpt-3.5-turbo"
-        ]
+        if self.name not in _MODELS_CACHE:
+            models = self.client.models.list()
+            _MODELS_CACHE[self.name] = [m.id for m in models.data]
+        return _MODELS_CACHE[self.name]
 
 
 @adapter(Interface)
@@ -73,10 +72,3 @@ class MistralAIService(OpenAIService):
 @implementer(IAIAPIService)
 class OpenRouterAIService(OpenAIService):
     name = "OpenRouter"
-
-    def list_models(self):
-        return [
-            "google/gemini-flash-1.5",
-            "anthropic/claude-3.5-sonnet:beta",
-            "meta-llama/llama-3.1-70b-instruct"
-        ]

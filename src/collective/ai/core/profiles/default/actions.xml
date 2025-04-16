@@ -6,7 +6,7 @@
     <object name="collective.ai.core" meta_type="CMF Action">
       <property name="title" i18n:translate="">Main</property>
       <property name="url_expr">string:${portal_url}/@@collective-ai-settings</property>
-      <property name="icon_expr">string:${portal_url}/++plone++collective.ai.core/logo.svg</property>
+      <property name="icon_expr">string:cpu</property>
     </object>
   </object>
   <object name="ai_actions" meta_type="CMF Action Category">
